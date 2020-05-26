@@ -1,0 +1,188 @@
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+
+}
+button:focus { outline: none; }
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+#NewInput{
+    cursor: text;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+    padding: 0 10px;
+    background-color: rgb(221, 221, 221);
+    transition:  width 0.5s;   
+}
+
+
+#NewInput:hover{
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#NewInput:focus{
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+::placeholder{
+color: rgb(0, 0, 0);
+opacity: 0.3;
+}
+
+
+.button-boxes{
+    width: 400px;
+    margin: 5px auto;
+    text-align: center; 
+}
+
+button:first-child{
+    display: block;
+    margin: 10px auto;
+}
+
+
+button{
+    margin: auto;
+    width: 98px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+
+#content{
+    margin: 50px auto;
+    min-width: 500px;
+}
+
+
+#table-list{
+    position: relative;
+    margin: auto;
+    width: 500px;
+    border: 1px solid rgb(25, 80, 105);
+}
+
+
+.todo{ 
+    border: 1px solid black;
+    height: 50px;
+    width: 500px;
+    text-align: center;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 70px;
+    position: relative;
+}
+
+
+
+
+.removebtn{
+    
+    position: absolute;
+    left:13px;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    color:rgb(0, 0, 0);
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.removebtn:hover{
+    transition: 0.4s;
+    background-color: rgb(252, 116, 66);
+    color: white;
+
+}
+
+.inpcheckbox{
+    position: absolute;
+    top: 16px;
+    right:12px;
+    height: 17px;
+    width: 17px;
+    cursor: pointer;
+}
+
+.inpcheckbox:checked{
+    background-color: transparent;
+}
+
+.editicon{
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 35px;
+    height: 17px;
+    width: 17px;
+}
+
+.editicon:hover{
+    box-shadow: 1px 1px 1px 1px rgb(194, 194, 194);
+}
+
+
+#editbox{
+    position: fixed;
+    top: 40%;
+    left: 0;
+    right: 0;
+    width: 700px;
+    height: 60px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin: auto;
+
+}
+
+
+#okedit{
+    position: fixed;
+    display: flex;
+    top: 53%;
+    left: 0;
+    right: 0;
+    width: 150px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 25px;
+    border-radius: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: rgb(32, 83, 250);
+}
+
+#okedit:hover{
+    transition: 0.5s;
+    background-color: cornflowerblue;
+}
+
+.editStation{
+    display: none;
+}

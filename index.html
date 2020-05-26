@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="header">
+            <input id="NewInput" type="text" placeholder="write new todo here">
+            <div class="button-boxes">
+                <button onclick="newInput()">Add New</button>
+                <button class="showall" onclick="changeStateButton(0)">All</button>
+                <button onclick="changeStateButton(1)">Active</button>
+                <button onclick="changeStateButton(2)">Completed</button>
+            </div>
+        </div>
+
+        <div id="content">
+            <table id="table-list"></table>
+        
+        </div>
+    </div>
+    <div class="editStation">
+        <input type="text" id="editbox">
+        <div onclick="OkEditButton()" id="okedit">ok</div>
+    </div>
+    <script src="model.js"></script>
+    <script src="controler.js"></script>
+    <script src="view.js"></script>
+</body>
+</html>
