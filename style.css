@@ -11,7 +11,7 @@ input:focus, textarea:focus, select:focus{
     outline: none;
 }
 
-.container{
+#container{ 
     margin-top: 50px;
 }
 
@@ -47,7 +47,7 @@ opacity: 0.3;
 }
 
 
-.button-boxes{
+#button-boxes{
     width: 400px;
     margin: 5px auto;
     text-align: center; 
@@ -93,6 +93,11 @@ button{
     padding-left: 50px;
     padding-right: 70px;
     position: relative;
+}
+
+.completed-todo{
+    text-decoration: line-through;
+    background-color: rgb(177, 84, 84);
 }
 
 
@@ -183,6 +188,20 @@ button{
     background-color: cornflowerblue;
 }
 
-.editStation{
+#editStation{
     display: none;
+}
+
+.active-state{
+    background-color: rgb(42, 161, 125);
+}
+
+.edit-station-on{
+    display: block !important;
+}
+
+
+
+.opacity{
+    opacity: 0.5;
 }

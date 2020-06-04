@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
+     
+    <div id="container">
 
         <div class="header">
             <input id="NewInput" type="text" placeholder="write new todo here">
-            <div class="button-boxes">
-                <button onclick="newInput()">Add New</button>
-                <button class="showall" onclick="changeStateButton(0)">All</button>
-                <button onclick="changeStateButton(1)">Active</button>
-                <button onclick="changeStateButton(2)">Completed</button>
+            <div id="button-boxes">
+                <button onclick="CONTROLER.newInput()">Add New</button>
+                <button class="showall" onclick="CONTROLER.changeStateButton(0)">All</button>
+                <button onclick="CONTROLER.changeStateButton(1)">Active</button>
+                <button onclick="CONTROLER.changeStateButton(2)">Completed</button>
             </div>
         </div>
 
         <div id="content">
-            <table id="table-list"></table>
+            <div id="table-list"></div>
         
         </div>
     </div>
-    <div class="editStation">
+    <div id="editStation">
         <input type="text" id="editbox">
-        <div onclick="OkEditButton()" id="okedit">ok</div>
+        <div onclick="CONTROLER.OkEditButton()" id="okedit">ok</div>
     </div>
     <script src="model.js"></script>
     <script src="controler.js"></script>
