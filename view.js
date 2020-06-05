@@ -1,12 +1,11 @@
-Doc = document.getElementById.bind(document);
 
 var VIEW = {
-
-    input : Doc("NewInput"),
-    TableList:Doc("table-list"),
-    EditInput : Doc("editbox"),
-    Container: Doc("container"),
-    EditStation : Doc("editStation"),
+    Doc : document.getElementById.bind(document),
+    input : VIEW.Doc("NewInput"),
+    TableList:VIEW.Doc("table-list"),
+    EditInput : VIEW.Doc("editbox"),
+    Container: VIEW.Doc("container"),
+    EditStation : VIEW.Doc("editStation"),
     check:false,
     index:0,
     oldInput:"",
@@ -117,7 +116,7 @@ var VIEW = {
 
 
     SetStatesButtonColor:function(S){
-        var ButtonsBoxes = Doc("button-boxes").children; 
+        var ButtonsBoxes = VIEW.Doc("button-boxes").children; 
         for(var i=1 ; i< 4 ; i++){
             if(S+1==i){
                 ButtonsBoxes[i].classList.add("active-state");   

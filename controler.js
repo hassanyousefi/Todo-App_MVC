@@ -10,13 +10,14 @@ var CONTROLER={
 
     Render:function(StateButton){
         VIEW.cleanList();
-        for(var i=0; i<todos.length;i++){
-            if(StateButton==2 && !todos[i].completed)
+        lenTodo = MODEL.todos.length
+        for(var i=0; i<lenTodo;i++){
+            if(StateButton==2 && !MODEL.todos[i].completed)
             continue;
-            if(StateButton==1 && todos[i].completed)
+            if(StateButton==1 && MODEL.todos[i].completed)
             continue;
             
-            VIEW.createCell(todos[i]);
+            VIEW.createCell(MODEL.todos[i]);
         }
         VIEW.SetStatesButtonColor(StateButton);
     },
@@ -38,7 +39,7 @@ var CONTROLER={
 
     EditTodo:function(){
         VIEW.findIndex(this);
-        VIEW.oldInput= todos[VIEW.Index].text;
+        VIEW.oldInput= MODEL.todos[VIEW.Index].text;
         VIEW.EditInp();
     },
 

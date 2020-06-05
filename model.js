@@ -1,17 +1,18 @@
-todos = [];
+
 var MODEL={
+    todos : [],
     addInArray:function(D){
         var NewTodo = {text:D , completed:false};
-        todos.push(NewTodo);
+        this.todos.push(NewTodo);
     },
     checked:function(check, index){ 
-        todos[index].completed=check;
+        this.todos[index].completed=check;
     },
     edit:function(textN ,index){
-        todos[index].text= textN;
+        this.todos[index].text= textN;
     },
     remove:function(index){
-        todos.splice(index,1);
+        this.todos.splice(index,1);
     }
 }
 
