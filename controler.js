@@ -1,5 +1,8 @@
 var CONTROLER={
-
+    loadPage:function(){
+        MODEL.todos = JSON.parse(localStorage["Todos"]);
+        CONTROLER.changeStateButton(Number(localStorage.getItem("state")));
+    },
     newInput:function(){
         if (!VIEW.validateData())
         return 
@@ -20,6 +23,7 @@ var CONTROLER={
             VIEW.createCell(MODEL.todos[i]);
         }
         VIEW.SetStatesButtonColor(StateButton);
+        localStorage["Todos"]= JSON.stringify(MODEL.todos);
     },
 
 
@@ -53,6 +57,7 @@ var CONTROLER={
 
     changeStateButton:function(stateNumber){
         CONTROLER.Render(stateNumber);
+        localStorage.setItem("state", stateNumber);
     }
 
 }
