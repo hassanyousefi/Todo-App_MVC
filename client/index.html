@@ -17,6 +17,11 @@
                 <button class="showall" onclick="CONTROLER.changeStateButton(0)">All</button>
                 <button onclick="CONTROLER.changeStateButton(1)">Active</button>
                 <button onclick="CONTROLER.changeStateButton(2)">Completed</button>
+                
+            </div>
+            <div class="server-btn">
+                <button onclick="CONTROLER.uploadBtn()">upload</button>
+                <button onclick="CONTROLER.downloadBtn()">download</button>
             </div>
         </div>
 
@@ -33,7 +38,7 @@
     <script src="controler.js"></script>
     <script src="view.js"></script>
     <script>
-        CONTROLER.loadPage();
+        CONTROLER.loadPage();        
     </script>
 </body>
 </html>

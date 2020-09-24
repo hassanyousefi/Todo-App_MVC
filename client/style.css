@@ -20,7 +20,7 @@ input:focus, textarea:focus, select:focus{
     width: 200px;
     height: 40px;
     font-size: 15px;
-    border: 1px solid black;
+    border: 1px solid;
     display: block;
     margin: auto;
     padding: 0 10px;
@@ -53,11 +53,24 @@ opacity: 0.3;
     text-align: center; 
 }
 
-button:first-child{
+#button-boxes button:first-child{
     display: block;
     margin: 10px auto;
 }
 
+.server-btn{
+    margin: 10px auto;
+    width: 200px;
+}
+.server-btn button{
+    border-radius: 0 !important;
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+.server-btn button:hover{
+    background-color: rgb(245, 245, 245);
+    color: black;
+}
 
 button{
     margin: auto;

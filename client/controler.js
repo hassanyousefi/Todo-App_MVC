@@ -1,8 +1,12 @@
+
+
 var CONTROLER={
     loadPage:function(){
         MODEL.todos = JSON.parse(localStorage["Todos"]);
         CONTROLER.changeStateButton(Number(localStorage.getItem("state")));
     },
+
+
     newInput:function(){
         if (!VIEW.validateData())
         return 
@@ -24,6 +28,7 @@ var CONTROLER={
         }
         VIEW.SetStatesButtonColor(StateButton);
         localStorage["Todos"]= JSON.stringify(MODEL.todos);
+    
     },
 
 
@@ -58,6 +63,31 @@ var CONTROLER={
     changeStateButton:function(stateNumber){
         CONTROLER.Render(stateNumber);
         localStorage.setItem("state", stateNumber);
+    },
+
+
+    downloadBtn:function() {
+    
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                MODEL.todos=JSON.parse(this.responseText);    
+                CONTROLER.Render(0);
+            }
+        };
+        xhttp.open('GET', 'download', true);
+        xhttp.send();
+    },
+
+
+    uploadBtn:function(){
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "upload", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(JSON.stringify(MODEL.todos));
+
     }
+    
 
 }
