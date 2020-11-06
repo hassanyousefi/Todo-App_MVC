@@ -64,11 +64,11 @@ opacity: 0.3;
 }
 .server-btn button{
     border-radius: 0 !important;
-    background-color: rgb(56, 56, 56);
-    color: white;
+    background-color: rgb(245, 245, 245);
+    color: rgb(0, 0, 0);
 }
 .server-btn button:hover{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(61, 72, 231);
     color: black;
 }
 
@@ -110,7 +110,7 @@ button{
 
 .completed-todo{
     text-decoration: line-through;
-    background-color: rgb(177, 84, 84);
+    background-color: rgb(255, 124, 49);
 }
 
 
@@ -206,7 +206,11 @@ button{
 }
 
 .active-state{
-    background-color: rgb(42, 161, 125);
+    background-color:#329ddb;
+}
+
+.active-state:hover{
+    background-color: #00a2ff;
 }
 
 .edit-station-on{

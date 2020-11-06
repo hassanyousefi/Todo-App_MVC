@@ -8,8 +8,10 @@ exports.requestHandler = function requestHandler(req , res){
             "/":states.root,
             "/download":states.download
         },
-        POST:{
-            "/upload":states.upload
+        POST: {
+            "/sign-up":states.signUp,
+            "/upload":states.upload,
+            "/sign-in":states.signIn
         }
     })[req.method][req.url];
 

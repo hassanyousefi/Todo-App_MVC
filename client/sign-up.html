@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head"><h3>Sign up in TodoApp</h3></div>
+
+        <div class="first-name field">
+            <div class="head-name">First Name</div> 
+            <input class="first-name-inp input" type="text" placeholder="Enter your first name">
+        </div>
+
+        <div class="last-name field">
+            <div class="head-name">Last Name</div> 
+            <input class="last-name-inp input" type="text" placeholder="Enter your last name">
+        </div>
+
+        <div class="username field">
+            <div class="head-name">Username</div> 
+            <input class="user-inp input" type="text" placeholder="Enter your username">
+        </div>
+
+        <div class="password field">
+            <div class="head-name">Password</div>
+            <input class="pass-inp input" type="password" placeholder="Enter your password">
+        </div>
+
+        <button onclick="signUp()" class="submit-btn">Submit</button>
+
+        <div class="option">Already have an account?<a onclick="changePage('sign-in')"> sing in</a></div>
+    </div>
+    <script src="sign.js"></script>
+</body>
+</html>

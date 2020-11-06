@@ -2,7 +2,8 @@
 
 var CONTROLER={
     loadPage:function(){
-        MODEL.todos = JSON.parse(localStorage["Todos"]);
+        var inf = JSON.parse(localStorage["information"]);
+        MODEL.todos = inf.list;
         CONTROLER.changeStateButton(Number(localStorage.getItem("state")));
     },
 
@@ -27,8 +28,9 @@ var CONTROLER={
             VIEW.createCell(MODEL.todos[i]);
         }
         VIEW.SetStatesButtonColor(StateButton);
-        localStorage["Todos"]= JSON.stringify(MODEL.todos);
-    
+        var inf = JSON.parse(localStorage["information"]);
+        inf.list = MODEL.todos;
+        localStorage["information"]= JSON.stringify(inf);
     },
 
 
@@ -71,23 +73,37 @@ var CONTROLER={
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
+                var resTemp = this.responseText;
+                if(!resTemp) return;
                 MODEL.todos=JSON.parse(this.responseText);    
                 CONTROLER.Render(0);
+                alert("download successfuly!");
             }
         };
+        const JWT = localStorage["information"];
         xhttp.open('GET', 'download', true);
+        xhttp.setRequestHeader('authorization', JWT);
         xhttp.send();
     },
 
 
     uploadBtn:function(){
-
+        const JWT = localStorage["information"];
         var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                var resTemp = this.responseText;
+                if(!resTemp) return;
+                alert("upload successfuly!");
+            }
+        }
         xhttp.open("POST", "upload", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.setRequestHeader('authorization', JWT);
         xhttp.send(JSON.stringify(MODEL.todos));
-
     }
     
 
 }
+
+
