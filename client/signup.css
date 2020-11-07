@@ -8,7 +8,7 @@
     margin: 100px auto;
     text-align: center;
     width: 450px;
-    height: 660px;
+    height: 700px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 10px;
     background-color: rgba(241, 241, 241, 0.329);
@@ -75,6 +75,30 @@
     transition: 0.5s;
     background-color: #0026ff;
 }
+
+
+.option .sign-txt{
+    display: inline;
+}
+
+.option .guest-btn{
+    background-color: rgb(252, 116, 66);
+    display: block;
+    margin: 18px auto 0;
+    width: 450px;
+    height: 46px;
+    border-radius: 0 0 10px 10px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+.option .guest-btn:hover{
+    background-color: rgb(231, 62, 0);
+    transition: 0.3s;
+}
+
 
 .option a{
     color: blue;

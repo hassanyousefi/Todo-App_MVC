@@ -7,6 +7,8 @@ var VIEW = {
     EditInput : Doc("editbox"),
     Container: Doc("container"),
     EditStation : Doc("editStation"),
+    downloadBtn : Doc("download-btn"),
+    uploadBtn : Doc("upload-btn"),
     check:false,
     index:0,
     oldInput:"",
@@ -48,7 +50,7 @@ var VIEW = {
 
         if (Todo.completed){
                 CellTodo.classList.add("completed-todo")
-            return
+
         }
 
         (function AddCheckbox(){
@@ -56,6 +58,10 @@ var VIEW = {
             check.type = "checkbox";
             check.className= "inpcheckbox";
             check.onclick=CONTROLER.CheckBoxTodo;
+            if(Todo.completed)
+            check.checked = true;
+            else
+            check.checked = false;
             CellTodo.appendChild(check); 
             })();
 
@@ -127,6 +133,11 @@ var VIEW = {
             }
         }
     
+    },
+
+    hideBtn:function(){
+        this.downloadBtn.classList.add("hide-btn");
+        this.uploadBtn.classList.add("hide-btn");
     }
 }
 

@@ -18,7 +18,9 @@ function signIn() {
 
             else{
                 var JWT = this.responseText;
-                localStorage.setItem("information", JWT);
+                localStorage["information"] = JWT;
+                localStorage["guestMode"] = "false";
+                username.value = "";
                 location.href= "/user";
             }
 
@@ -43,7 +45,8 @@ function signUp() {
         if (this.readyState == 4 && this.status == 200) {
             if(this.responseText){
                 var JWT = this.responseText;
-                localStorage.setItem("information", JWT);
+                localStorage["information"] = JWT;
+                localStorage["guestMode"] = "false";
                 firstName.value = "";
                 lastName.value = "";
                 username.value = "";
@@ -107,4 +110,23 @@ function verfing(page){
         }
     }
     return true;
+}
+
+function anonymous(){
+    if(localStorage["guestInf"]){
+        localStorage["guestMode"]= "true";
+        changePage('anonymous');
+        return;
+    }
+
+    //for first user
+    var inf = {};
+    inf.list = [];
+    inf.token = "";
+    inf.firstName = "guest";
+    inf.lastName = "";
+    inf.username = "anonymous";
+    localStorage["guestInf"] = JSON.stringify(inf);
+    localStorage["guestMode"]= "true";
+    changePage('anonymous');
 }

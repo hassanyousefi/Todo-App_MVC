@@ -5,7 +5,7 @@ var fs = require('fs');
     if(req.url=="/" || req.url == "/sign-up"){
         req.url="sign-up.html";
     }
-    if(req.url=="/user"){
+    if(req.url=="/user" || req.url == "/anonymous"){
         req.url = "index.html";
     }
     if(req.url == "/sign-in"){

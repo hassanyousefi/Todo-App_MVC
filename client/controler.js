@@ -2,9 +2,16 @@
 
 var CONTROLER={
     loadPage:function(){
-        var inf = JSON.parse(localStorage["information"]);
+        if(localStorage["guestMode"] == "true"){
+            VIEW.hideBtn()
+            var inf = JSON.parse(localStorage["guestInf"]);
+        }
+        else{
+            var inf = JSON.parse(localStorage["information"]);
+        }
+
         MODEL.todos = inf.list;
-        CONTROLER.changeStateButton(Number(localStorage.getItem("state")));
+        CONTROLER.changeStateButton(Number(localStorage["state"]));
     },
 
 
@@ -28,9 +35,19 @@ var CONTROLER={
             VIEW.createCell(MODEL.todos[i]);
         }
         VIEW.SetStatesButtonColor(StateButton);
-        var inf = JSON.parse(localStorage["information"]);
-        inf.list = MODEL.todos;
-        localStorage["information"]= JSON.stringify(inf);
+        if(localStorage["guestMode"] == "true"){
+            var inf = JSON.parse(localStorage["guestInf"]);
+            inf.list = MODEL.todos;
+            localStorage["guestInf"]= JSON.stringify(inf);
+        }
+        else{
+            var inf = JSON.parse(localStorage["information"]);
+            inf.list = MODEL.todos;
+            localStorage["information"]= JSON.stringify(inf);
+        }
+
+        
+        
     },
 
 
@@ -64,7 +81,7 @@ var CONTROLER={
 
     changeStateButton:function(stateNumber){
         CONTROLER.Render(stateNumber);
-        localStorage.setItem("state", stateNumber);
+        localStorage["state"] = stateNumber;
     },
 
 

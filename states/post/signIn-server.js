@@ -38,8 +38,9 @@ function signIn(req, res){
                     var randomNum = Math.floor(Math.random() * 800)+101;
                     const newToken = Buffer.from(user.password).toString('base64')+"%"+
                     randomNum + Buffer.from(user.username).toString('base64')+"";
-                    console.log(userList[userIndex].firstName, userList[userIndex].lastName);
                     var information = {
+                        firstName : userList[userIndex].firstName,
+                        lastName : userList[userIndex].lastName,
                         username : user.username,
                         token : newToken,
                         list : userList[userIndex].list

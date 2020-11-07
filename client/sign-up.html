@@ -32,7 +32,10 @@
 
         <button onclick="signUp()" class="submit-btn">Submit</button>
 
-        <div class="option">Already have an account?<a onclick="changePage('sign-in')"> sing in</a></div>
+        <div class="option">
+            <div class="sign-txt">Already have an account?</div><a onclick="changePage('sign-in')"> sing in</a>
+            <button onclick="anonymous()" class="guest-btn"><div>Enter as a guest</div></button>
+        </div>
     </div>
     <script src="sign.js"></script>
 </body>

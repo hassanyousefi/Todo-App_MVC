@@ -54,6 +54,8 @@ function signUp(req, res) {
                     randomNum + Buffer.from(user.username).toString('base64')+"";
 
                     var information = {
+                        firstName:user.firstName,
+                        lastName:user.lastName,
                         username:user.username,
                         token:newToken,
                         list:[]
