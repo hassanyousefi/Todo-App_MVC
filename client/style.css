@@ -2,7 +2,6 @@
     border: none;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     user-select: none;
 
 }
@@ -99,7 +98,6 @@ button{
 
 .todo{ 
     border: 1px solid black;
-    width: 500px;
     text-align: center;
     padding: 15px;
     padding-left: 50px;
@@ -126,12 +124,13 @@ button{
     color:rgb(0, 0, 0);
     font-size: 15px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .removebtn:hover{
     transition: 0.3s;
-    color: white;
-    background-color: rgb(252, 116, 66);
+    color: rgb(255, 0, 0);
+    background-color: rgb(221, 221, 221);
 
 }
 
@@ -157,7 +156,7 @@ button{
 }
 
 .editicon:hover{
-    transition: all 0.1s;
+    transition: all 0.3s;
     height: 17px;
     width: 17px;
 }
@@ -226,4 +225,104 @@ button{
 
 .hide-btn{
     display: none !important ;
+}
+
+
+
+.header{
+    background-image: linear-gradient(to right,rgba(255, 207, 167, 0.041),rgb(255, 81, 0));
+    box-shadow: 0px 0px 10px 2px rgb(163, 163, 163);
+    height: 50px;
+    width: auto;
+    position: relative;
+    top: 0;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+.header .icon img{
+    height: 70px;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+}
+
+.app-name{
+    color: rgb(75,111,223);
+    width: 250px;
+    margin: auto;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 24px;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+.header span{
+    height: 50px;
+    width: 1px;
+}
+
+
+.header .left-span{
+    position: absolute;
+    right: 120px;
+    background-color: rgba(248, 248, 248, 0.5);
+}
+
+
+#name-user{
+    position: absolute;
+    top: 24px;
+    width: fit-content;
+    left:205px;
+    font-size: 17px;
+    font-family: sans-serif;
+    color:rgb(75,111,223);
+}
+
+
+.header .right-span{
+    position: absolute;
+    left: 195px;
+    background-color: rgba(38, 76, 202, 0.712);
+}
+
+#username{
+    position: absolute;
+    top: 24px;
+    width: fit-content;
+    right: 130px;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+.head-option{
+    position: absolute;
+    top: 14px;
+    height: 20px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0.432);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.head-option:hover{
+    
+    background-color: white;
+    color: red;
+    box-shadow: 0 0 3px 1px rgb(150, 150, 150);
+}
+
+
+.sign-btn-head{
+    width: 70px;
+    right: 30px;
 }

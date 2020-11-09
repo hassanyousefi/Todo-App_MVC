@@ -13,6 +13,10 @@ function signIn(req, res){
                         return err;        
                     }
 
+                    // for first user
+                    if(!datafile.toString()){
+                        datafile = "[]";
+                    }
                     userList = JSON.parse(datafile);
                     lenList = userList.length;
                     for(var i = 0; i<lenList; i++) {

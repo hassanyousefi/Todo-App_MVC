@@ -9,6 +9,10 @@ var VIEW = {
     EditStation : Doc("editStation"),
     downloadBtn : Doc("download-btn"),
     uploadBtn : Doc("upload-btn"),
+    name : Doc("name-user"),
+    username : Doc("username"),
+    division : Doc("division"),
+    signBtn : Doc("sign-btn"),
     check:false,
     index:0,
     oldInput:"",
@@ -138,7 +142,16 @@ var VIEW = {
     hideBtn:function(){
         this.downloadBtn.classList.add("hide-btn");
         this.uploadBtn.classList.add("hide-btn");
+        this.signBtn.classList.add("hide-btn");
+        this.division.classList.add("hide-btn");
+    },
+
+    showName:function(name, lName, uName){
+        this.name.innerHTML = name +" "+lName;
+        this.username.innerHTML = uName+"";
     }
+
+    
 }
 
 

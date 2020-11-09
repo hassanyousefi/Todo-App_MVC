@@ -1,6 +1,6 @@
 *{
-    padding: none;
-    margin: none;
+    padding: 0;
+    margin: 0;
     border: none;
 }
 
@@ -8,7 +8,7 @@
     margin: 100px auto;
     text-align: center;
     width: 450px;
-    height: 498px;
+    height: 465px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 10px;
     background-color: rgba(241, 241, 241, 0.329);
@@ -21,6 +21,7 @@
 }
 .head h3{
     font-size: 30px;
+    margin: 30px auto;
 }
 
 .username , .password {
@@ -80,23 +81,6 @@
     display: inline;
 }
 
-.option .guest-btn{
-    background-color: rgb(252, 116, 66);
-    display: block;
-    margin: 18px auto 0;
-    width: 450px;
-    height: 46px;
-    border-radius: 0 0 10px 10px;
-    font-size: 18px;
-    color: black;
-    cursor: pointer;
-    outline: none;
-}
-
-.option .guest-btn:hover{
-    background-color: rgb(231, 62, 0);
-    transition: 0.3s;
-}
 
 
 .option a{
@@ -107,4 +91,95 @@
 
 .option a:hover{
     color: rgb(87, 112, 223);
+}
+
+
+.header{
+    background-image: linear-gradient(to right,rgba(255, 207, 167, 0.041),rgb(255, 81, 0));
+    box-shadow: 0px 0px 10px 2px rgb(163, 163, 163);
+    height: 50px;
+    width: auto;
+    position: relative;
+    top: 0;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+}
+.header .icon img{
+    height: 70px;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+}
+.header span{
+    height: 50px;
+    width: 1px;
+    background-color: rgba(248, 248, 248, 0.5);
+    position: absolute;
+    right: 120px;
+    
+}
+
+.app-name{
+    color: rgb(75 111 223);
+    width: 250px;
+    margin: auto;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 24px;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+.head-option{
+    position: absolute;
+    top: 14px;
+    height: 20px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0.432);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign-btn-head{
+    width: 70px;
+    right: 30px;
+    
+}
+.guest-btn-head{
+    width: 110px;
+    right: 130px;
+}
+.head-option:hover{
+    
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 3px 1px rgb(150, 150, 150);
+
+}
+
+.welcome-txt{
+    text-align: center;
+    margin: 60px;
+    width: 850px;
+    margin: 80px auto 30px;
+    font-family: sans-serif;
+    color: #001275;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 10px 0;
+    padding: 22px 0;
+    
+}
+
+.welcome-txt h1{
+    margin: 14px 0;
+}
+.welcome-txt span{
+    color: orange;
 }

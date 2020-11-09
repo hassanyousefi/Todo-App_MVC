@@ -3,11 +3,18 @@
 var CONTROLER={
     loadPage:function(){
         if(localStorage["guestMode"] == "true"){
-            VIEW.hideBtn()
+            VIEW.hideBtn();
             var inf = JSON.parse(localStorage["guestInf"]);
+            VIEW.showName("guest", "", "");
         }
         else{
+            
             var inf = JSON.parse(localStorage["information"]);
+            if(!inf)return;
+            var fName = inf.firstName;
+            var LName = inf.lastName;
+            var UName = inf.username;
+            VIEW.showName(fName, LName, UName);
         }
 
         MODEL.todos = inf.list;
