@@ -1,4 +1,4 @@
-var states = require('./states');
+var states = require('./server-side');
 
 exports.requestHandler = function requestHandler(req , res){
     var route;
